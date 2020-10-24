@@ -1,10 +1,9 @@
-(defun get-fil-as-a-string (filename)
+(defun get-file-as-a-string (filename)
   (with-open-file (stream filename)
     (let ((contents (make-string (file-length stream))))
       (read-sequence contents stream)
       contents)))
 (defun flatten (L)
-  "Converts a list to single level."
   (if (null L)
     nil
     (if(atom (first L))
@@ -25,4 +24,4 @@
       nil)))
 
 
-(write-list-to-file "out.txt" (flatten(string-to-list(get-fil-as-a-string "nested_list.txt"))))
+(write-list-to-file "out.txt" (flatten(string-to-list(get-file-as-a-string "nested_list.txt"))))
