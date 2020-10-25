@@ -24,4 +24,4 @@
       nil)))
 
 
-(write-list-to-file "out.txt" (flatten(string-to-list(get-file-as-a-string "nested_list.txt"))))
+(write-list-to-file "flattened_list.txt" (flatten(string-to-list(get-file-as-a-string "nested_list.txt"))))

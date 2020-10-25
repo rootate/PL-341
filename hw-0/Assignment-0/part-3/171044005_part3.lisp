@@ -27,9 +27,9 @@
     (format out "~%")))
 
 (defun doit()
- (dolist (x (string-to-list (get-file-as-a-string "integer_inputs.txt")))
-   (setq l '()) ( collatz x)
-   (write-list-to-file "collatz_outputs.txt" (reverse l))))
+  (dolist (x (string-to-list (get-file-as-a-string "integer_inputs.txt")))
+    (setq l '()) ( collatz x)
+    (write-list-to-file "collatz_outputs.txt" (reverse l))))
 
 (doit)
 
